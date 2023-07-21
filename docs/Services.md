@@ -54,7 +54,7 @@ services:
 Status is determined based on whether I have validated it to work properly. This will be automatically updated during build checks and regression testing based on the format of the output data. 
 * Validated, a status of validated indicates that the parsing works as expected and is producing actionable and normalized output data
 * Planned, a status of planned indicates that I have the approriate data needed to validate the service, but it hasn't yet been implemented completely
-* Investingating - a status of investigating indicates that I still require additional information to be able to parse this service
+* Investigating - a status of investigating indicates that I still require additional information to be able to parse this service
 
 ## Types
 Configuring types allows you to specify what data you expect to grab from a service. This is important as the script needs to know what data is it looking for. These are dictated by Regular Expressions, in the future we will support custom RegEx, but for now you can simply define it using a keyword. Currently supported types are IPv4 Addresses (public and non-public), IPv6 Addresses (all), URLs, and FQDNs.
@@ -73,8 +73,6 @@ Services are only scanned if they're enabled. To support this, a simple boolean 
 
 
 ## Example Fully Configured Service
-Simple place the scheme in the `configs/schemas/` directory and add the schema to the `configs/services.yml` file.
-
 ```yaml
 services:
   - service-name: cisco-webex
