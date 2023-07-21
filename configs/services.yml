@@ -1,0 +1,194 @@
+services:
+  - service-name: amazon-web-services
+    method: "parse-json"
+    sources: 
+      - "https://ip-ranges.amazonaws.com/ip-ranges.json"
+    status: "planned"
+    types:
+      - ipv4
+      - ipv6
+    enabled: false
+
+  - service-name: amazon-prime-video
+    method: "undetermined"
+    sources: "undetermined"
+    status: "investigating"
+    enabled: false
+
+  - service-name: bluejeans
+    method: "web-scrape"
+    sources: 
+      - "https://support.bluejeans.com/s/article/TCP-UDP-ports-used-by-BlueJeans-Network"
+    status: "planned"
+    types:
+      - ipv4
+      - domain
+      - url
+    enabled: false
+
+  - service-name: cisco-webex
+    method: "web-scrape"
+    sources: 
+      - "https://help.webex.com/en-us/article/WBX000028782/Network-Requirements-for-Webex-Services"
+    status: "planned"
+    types:
+      - ipv4
+      - domain
+      - url
+    enabled: false
+
+  - service-name: dialpad
+    method: "web-scrape"
+    sources: 
+    - "https://help.dialpad.com/hc/en-us/articles/209954306-Network-Recommendations"
+    status: "planned"
+    types:
+      - domain
+      - url
+    enabled: false
+
+  - service-name: disney-plus
+    method: "arin-query"
+    sources: 
+      - "AS11251"
+      - "AS23344"
+      - "AS11251"
+    status: "planned"
+    types:
+      - ipv4
+      - ipv6
+    enabled: false
+
+  - service-name: google-video
+    method: "web-scrape"
+    sources: 
+      - "https://support.google.com/a/answer/9206518?hl=en#zippy=%2Callow-list-uris%2Cvoice-architecture%2Coutbound-ports-need-to-allow-voice-traffic%2Cbandwidth-requirements-per-site%2Cbandwidth-recommendation-per-participant"
+      - "https://support.google.com/a/answer/1279090?hl=en#zippy=%2Cstep-allow-access-to-google-ip-address-ranges%2Cstep-allow-access-to-uniform-resource-identifiers-uris%2Cstep-set-up-outbound-ports-for-media-traffic"
+    status: "planned"
+    types:
+      - ipv4
+      - ipv6
+      - url
+    enabled: false
+
+  - service-name: googe-voice
+    method: "web-scrape"
+    sources: 
+      - "https://support.google.com/a/answer/9206518?hl=en#zippy=%2Callow-list-uris%2Cvoice-architecture%2Coutbound-ports-need-to-allow-voice-traffic%2Cbandwidth-requirements-per-site%2Cbandwidth-recommendation-per-participant"
+    status: "undetermined"
+    types:
+      - ipv4
+      - ipv6
+      - url
+    enabled: false
+
+  - service-name: hulu
+    method: "arin-query"
+    sources: 
+      - "AS23286"
+    status: "undetermined"
+    types:
+      - ipv4
+      - ipv6
+    enabled: false
+
+  - service-name: microsoft-365
+    method: "json-parse"
+    sources: 
+      - "https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7"
+    status: "undetermined"
+    types:
+      - ipv4
+      - ipv6
+      - domain
+      - url
+    enabled: false
+
+  - service-name: microsoft-azure
+    method: "json-parse"
+    sources: 
+      - "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
+    status: "undetermined"
+    types:
+      - ipv4
+      - ipv6  
+    enabled: false
+
+  - service-name: netflix
+    method: "arin-query"
+    sources: 
+      - "AS55095"
+      - "AS40027"
+      - "AS394406"
+      - "AS2906"
+    status: "undetermined"
+    types:
+      - ipv4
+      - ipv6
+    enabled: false
+
+  - service-name: pandora-radio
+    method: "arin-query"
+    sources:
+      - "AS22518" # Need to confirm this is Pandora Radio and not a different corp with same name
+      - "AS40428"
+    status: "undetermined"
+    types:
+      - ipv4
+      - ipv6
+    enabled: false
+
+  - service-name: ring-central
+    method: "arin-query"
+    sources: 
+      - "AS40627"
+    status: "undetermined"
+    types:
+      - ipv4
+      - ipv6
+    enabled: false
+
+  - service-name: skype
+    method: "undetermined"
+    sources: 
+      - "undetermined"
+    status: "investigating"
+    enabled: false
+
+  - service-name: spotify
+    method: "undetermined"
+    sources: 
+    - "undetermined"
+    status: "investiating"
+    enabled: false
+
+  - service-name: tidal
+    method: "undetermined"
+    sources: 
+      - "undetermined"
+    status: "investigating"
+    enabled: false
+
+  - service-name: youtube
+    method: "arin-query"
+    sources:
+      - "AS36040"
+    status: "investigating"
+    types:
+      - ipv4
+      - ipv6
+    enabled: false
+
+  - service-name: zoom
+    method: "import"
+    sources: 
+      - "https://assets.zoom.us/docs/ipranges/Zoom.txt"
+      - "https://assets.zoom.us/docs/ipranges/ZoomMeetings.txt"
+      - "https://assets.zoom.us/docs/ipranges/ZoomCRC.txt"
+      - "https://assets.zoom.us/docs/ipranges/ZoomPhone.txt"
+      - "https://assets.zoom.us/docs/ipranges/ZoomCC.txt"
+      - "https://assets.zoom.us/docs/ipranges/ZoomCDN.txt"
+    status: "undetermined"
+    types:
+      - ipv4
+    enabled: false
